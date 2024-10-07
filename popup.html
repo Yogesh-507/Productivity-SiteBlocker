@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Productivity SiteBlocker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Productivity SiteBlocker</h1>
+    
+    <div id="loginSection">
+      <div class="input-group">
+        <input type="password" id="password" placeholder="Enter password">
+        <button class="toggle-password" type="button" aria-label="Toggle password visibility">👁️</button>
+      </div>
+      <button id="unlock" class="btn">Unlock</button>
+    </div>
+
+    <div id="controlSection" class="hidden">
+      <button id="lock" class="btn">Lock</button>
+      
+      <h2>Add Site to Block</h2>
+      <div class="input-group">
+        <input type="text" id="newSite" placeholder="Enter site to block">
+        <button id="addSite" class="btn">Add</button>
+      </div>
+
+      <h2>Blocked Sites</h2>
+      <ul id="blockedSitesList"></ul>
+
+      <h2>Schedule</h2>
+      <div id="scheduleInputs">
+        <div class="days-grid">
+          <label><input type="checkbox" name="day" value="0"> Sun</label>
+          <label><input type="checkbox" name="day" value="1"> Mon</label>
+          <label><input type="checkbox" name="day" value="2"> Tue</label>
+          <label><input type="checkbox" name="day" value="3"> Wed</label>
+          <label><input type="checkbox" name="day" value="4"> Thu</label>
+          <label><input type="checkbox" name="day" value="5"> Fri</label>
+          <label><input type="checkbox" name="day" value="6"> Sat</label>
+        </div>
+        <div class="time-inputs">
+          <input type="time" id="startTime">
+          <span>to</span>
+          <input type="time" id="endTime">
+        </div>
+      </div>
+      <button id="updateSchedule" class="btn">Update Schedule</button>
+
+      <h3>Current Schedule</h3>
+      <div id="currentSchedule"></div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

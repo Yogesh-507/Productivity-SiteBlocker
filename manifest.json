@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Productivity SiteBlocker",
+  "version": "1.3",
+  "description": "Block sites on a schedule to boost productivity",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "<all_urls>",
+    "storage",
+    "alarms"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
+}
